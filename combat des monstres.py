@@ -33,6 +33,32 @@ arcade.draw_lrtb_rectangle_filled(599, 619, 800, 700, (97, 50, 12))
 
 arcade.finish_render()
 
+import random
+import time
+import arcade
+
+niveau_vie = 20
+mini = 1
+maxi = 6
+nombre_victoires = 0
+nombre_défaites = 0
+nombre_adversaires = 0
+boss = 6
+
+
+jouer = input('vouler vous jouez a combat de monstres? (o) ou (n).')
+
+while jouer == 'o':
+    force_adversaire = random.randint(int(mini), 5)
+    print('Vous tombez face à face avec un adversaire de difficulté :', force_adversaire,)
+    time.sleep(0.5)
+    choix = input('Que voulez vous faire?\n'
+          '1.Combattre cet adversaire\n'
+          '2.Contourner cet adversaire et aller ouvrir une autre porte\n'
+          '3.Afficher les règles du jeu\n'
+          '4.Quitter la partie')
+    if choix == 1:
+
 arcade.run()
 
 niveau_vie = 20
